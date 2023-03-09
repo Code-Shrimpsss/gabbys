@@ -57,9 +57,6 @@ const Home: NextPage = () => {
           <div className="chat chat-end my-2 float-right">
             <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
           </div>
-          {/* <div className="chat chat-start my-2">
-            <div className="chat-bubble bg-white text-black">Please do! What's your favorite cut? <i id='chat_high_text'>I guess you’d be into ribeye or filet mignon?</i></div>
-          </div> */}
           <div className="chat chat-end my-2 float-right">
             <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
           </div>

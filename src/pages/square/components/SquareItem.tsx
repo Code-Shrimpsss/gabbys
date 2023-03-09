@@ -6,7 +6,7 @@ import HeartSolidIcon from "@/assets/svgs/Heart_Solid_Icon.svg";
 
 // square image 
 import ForkOption from "./forkOption";
-import SquareOrderItem from "./SquareOrderItem";
+import SquareOrder from "./SquareOrder";
 
 interface SquereData {
   type: string,
@@ -49,14 +49,14 @@ const SquareItem: NextComponentType<{}, {}, Props> = (props) => {
               <i>Gabby#0901 liked</i>
             </div>
             <div className="avatar_name flex items-center mb-2">
-              <strong className="avatar_name_title mr-4">{data.avatar_name}</strong>
-              <i>{data.avatar_id}</i>
+              <strong className="avatar_name_title mr-4">{data?.avatar_name}</strong>
+              <i>{data?.avatar_id}</i>
             </div>
             <div className="square_message_document mb-2 ">
-              {data.document}
+              {data?.document}
             </div>
             <div className="square_message_images_list mb-2">
-              {data.images.length === 0 ? "" : data.images.map((item) =>
+              {data?.images.length === 0 ? "" : data?.images.map((item) =>
                 <Image src={item} alt="picture" width={300} height={200} className="w-[30%]"></Image>
               )}
             </div>
@@ -65,8 +65,8 @@ const SquareItem: NextComponentType<{}, {}, Props> = (props) => {
             </div>
           </div>
           <div className="order_squere_detail w-full">
-            {data.order_list.map((item) =>
-              <SquareOrderItem order_value={item} />
+            {data?.order_list.map((item) =>
+              <SquareOrder order_value={item} />
             )}
           </div>
         </div>
