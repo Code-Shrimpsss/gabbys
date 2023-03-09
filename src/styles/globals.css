@@ -50,6 +50,23 @@ body {
   postion: relative;
     overflow: hidden; 
 }
+
+.chat-main::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.lone_box {
+  width: 100%;
+  height: 750px;
+  line-height: 50px;
+  overflow-y: scroll;
+  postion: relative;
+}
+
+.lone_box::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
 .sonPair {
             position: absolute;
             /* 相对定位 */
@@ -57,9 +74,7 @@ body {
             transition: all 0.5s;
 }
 
-.chat-main::-webkit-scrollbar {
-  display: none; /* Chrome Safari */
-}
+
 .main_text_font {
   font-family: 'Black Ops One';
   font-style: normal;
