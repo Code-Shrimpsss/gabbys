@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           </div>
           <div className="chat-main ml-8 min-w-40">
             {list.map((item, i) =>
-              index === i + 1 ? <Image className="sonPair" width={800} src={item} alt={"pic"}></Image> : "")}
+              index === i + 1 ? <Image className="sonPair" width={800} height={560} placeholder={"blur"} src={item} alt={"pic"}></Image> : "")}
           </div>
         </div>
         <div className="chatbox h-[200px] w-full drop-shadow rounded-xl mt-10">
