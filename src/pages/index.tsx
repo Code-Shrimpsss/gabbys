@@ -3,37 +3,21 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router"
 import type { NextPage } from 'next'
 import Header from '@/Layout/Header';
-import Testbox from '@/pages/test';
+// import Testbox from '@/pages/test';
 import chat_data from "@/mocks/chat_data.json"
 
 const Home: NextPage = () => {
   const router = useRouter();
-  function handleEnder(e: React.ReactElement) {
-    if (e.key === '16') {
+  // function handleEnder(e: React.ReactElement) {
+  //   if (e.key === '16') {
 
-    }
-  }
+  //   }
+  // }
   return (
     <>
       <header>
         <Header />
       </header>
-
-      {/* <div className="flex flex-col h-screen">
-        <div className="flex-1 bg-gray-100">
-          <Chat messages={messages} />
-        </div>
-        <div className="p-4 bg-white border-t border-gray-200">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Type a message..."
-            className="w-full p-2 rounded-lg focus:outline-none focus:ring"
-          />
-        </div>
-      </div> */}
-      <Testbox />
       <div className="layout_box xl:px-64 lg:px-40 md:px-20">
         <div className='flex items-center px-20 mt-16'>
           <div className='bg_gabby motion-safe:hover:scale-110 cursor-pointer' onClick={() => router.push({ pathname: "profile" })}>
@@ -42,24 +26,6 @@ const Home: NextPage = () => {
             />
           </div>
           <div className="chat-main ml-8 min-w-40">
-            <div className="chat chat-start max-w-xl ">
-              <div className="chat_message chat-bubble bg-white text-black py-0  ">Hey there! Did you <i id='chat_high_text'> cook steak again</i> today? How did it turn out?</div>
-            </div>
-            <div className="chat chat-end ">
-              <div className="chat_message chat-bubble bg-[#FFF6E9] text-black py-0">It was said that you would, destroy the Sith, not join them.</div>
-            </div>
-            <div className="chat chat-start">
-              <div className="chat_message chat-bubble bg-white text-black py-0">"That's a great idea. Have you ever tried using a coffee rub? It adds a nice depth of flavor."</div>
-            </div>
-            <div className="chat chat-end">
-              <div className="chat_message chat-bubble bg-[#FFF6E9] text-black">It was said <i id="chat_high_text">that you would</i>, destroy the Sith, not join them.</div>
-            </div>
-            <div className="chat chat-start">
-              <div className="chat_message chat-bubble bg-white text-black py-0">Sure do! Just mix together some ground coffee, brown sugar, salt, and a bit of chili powder. Rub it onto the steak and grill as usual.</div>
-            </div>
-            <div className="chat chat-end float-right">
-              <div className="chat_message chat-bubble bg-[#FFF6E9] text-black py-0">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
-            </div>
           </div>
         </div>
         <div className="chatbox h-[200px] w-full drop-shadow rounded-xl mt-10">
@@ -85,7 +51,7 @@ const Home: NextPage = () => {
             <div className="chatbox_right_text font-bold text-xl text-gray">Chat with gabby</div>
           </div>
           <div className="input_out_box p-4 pt-0 bg-bginputbox rounded-b-xl ">
-            <textarea className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onClick={() => { }} />
+            <textarea className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onKeyUp={() => { }} />
           </div>
         </div>
       </div>
