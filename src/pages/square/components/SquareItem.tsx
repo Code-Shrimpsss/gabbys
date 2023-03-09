@@ -5,10 +5,6 @@ import gabbyAvatar from "@/assets/images/gabby_avatar.png";
 import HeartSolidIcon from "@/assets/svgs/Heart_Solid_Icon.svg";
 
 // square image 
-import OnePic from "@/assets/images/onePic.png";
-// import twoPic from "@/assets/images/twoPic.png";
-// import threePic from "@/assets/images/threePic.png";
-
 import ForkOption from "./forkOption";
 import SquareOrderItem from "./SquareOrderItem";
 
