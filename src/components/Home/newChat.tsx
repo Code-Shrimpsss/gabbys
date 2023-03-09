@@ -1,92 +1,71 @@
-import React, { useState } from "react";
-import chat_data from "@/mocks/chat_data.json"
-// A type for the message object
-type Message = {
-  text: string;
-  isUser: boolean;
-};
+import React, { useState, useEffect } from "react";
+import { ChatBubble } from "react-daisyui";
 
-// A function to generate a random reply
-const getReply = (): string => {
-  return chat_data[];
-};
+type Message = { text: string; isUser: boolean };
 
-// A component to render a chat bubble
-const ChatBubble = ({ message, isUser }: Message) => {
+const Chat = ({ messages }: { messages: Message[] }) => {
+  const [chatMessages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    // 监听回车键
+    const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.keyCode === 13) {
+        // 添加用户消息
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { text: input, isUser: true },
+        ]);
+        // 清空输入框
+        setInput("");
+      }
+    };
+    window.addEventListener("keydown", handleEnter);
+    return () => window.removeEventListener("keydown", handleEnter);
+  }, [input]);
+
+  useEffect(() => {
+    // 如果有新消息且是用户发送的，则生成程序回复
+    const lastMessage = messages[messages.length - 1];
+    if (lastMessage && lastMessage.isUser) {
+      generateReply(lastMessage.text);
+    }
+  }, [chatMessages]);
+
+  const generateReply = (userMessage: string) => {
+    let reply: string;
+    switch (userMessage.toLowerCase()) {
+      case "hi":
+        reply = "Hello!";
+        break;
+      case "how are you?":
+        reply = "I'm fine, thank you.";
+        break;
+      case "what is your name?":
+        reply = "I'm Bing.";
+        break;
+      default:
+        reply = "Sorry, I don't understand.";
+    }
+    // 添加程序消息
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { text: reply, isUser: false },
+    ]);
+  };
+
   return (
-    <div className={`flex ${isUser ? "justify-end" : ""}`}>
-      <div
-        className={`chat-bubble ${isUser ? "bg-[#FFF6E9]" : ""} ${!isUser ? "bg-white" : ""
-          }`}
-      >
-        <div className="chat-content">{message}</div>
-      </div>
-    </div>
-  );
-};
-
-// A component to render the chat history
-const ChatHistory = ({ messages }: { messages: Message[] }) => {
-  return (
-    <div className="chat-history">
+    <div className="flex flex-col h-full p-4 space-y-4 overflow-y-auto">
       {messages.map((message, index) => (
-        <ChatBubble key={index} message={message.text} isUser={message.isUser} />
+        <ChatBubble
+          key={index}
+          text={message.text}
+          color={message.isUser ? "primary" : "secondary"}
+          position={message.isUser ? "right" : "left"}
+        />
       ))}
     </div>
   );
 };
 
-// A component to render the chat input
-const ChatInput = ({ onSend }: { onSend: (text: string) => void }) => {
-  const [value, setValue] = useState("");
-
-  // A function to handle the change of the input value
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  // A function to handle the key press of the input
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      onSend(value);
-      setValue("");
-    }
-  };
-
-  return (
-    <div className="chat-input">
-      <input
-        type="text"
-        placeholder="Type a message..."
-        value={value}
-        onChange={handleChange}
-        onKeyPress={handleKeyPress}
-      />
-    </div>
-  );
-};
-
-// A component to render the chat app
-const ChatApp = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
-
-  // A function to handle the send of a user message
-  const handleSend = (text: string) => {
-    // Add the user message to the messages state
-    setMessages([...messages, { text: text, isUser: true }]);
-
-    // Generate a reply and add it to the messages state after a delay
-    setTimeout(() => {
-      setMessages([...messages, { text: getReply(), isUser: false }]);
-    }, Math.random() * (3000 - 1000) + 1000);
-  };
-
-  return (
-    <div className="chat-app">
-      <ChatHistory messages={messages} />
-      <ChatInput onSend={handleSend} />
-    </div>
-  );
-};
-
-export default ChatApp;
+export default Chat;

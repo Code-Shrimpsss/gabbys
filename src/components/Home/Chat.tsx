@@ -1,7 +1,8 @@
 import React from "react";
 import { ChatBubble } from "react-daisyui";
+type Message = { text: string; isUser: boolean; };
 
-const Chat = ({ messages }) => {
+const Chat = ({ messages }: { messages: Message[] }) => {
   return (
     <div className="flex flex-col h-full p-4 space-y-4 overflow-y-auto">
       {messages.map((message, index) => (
