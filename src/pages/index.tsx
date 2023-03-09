@@ -39,21 +39,28 @@ const Home: NextPage = () => {
         </div>
         <div className="chat-main ml-8 ">
           <div className="chat chat-start my-2 max-w-xl">
-            <div className="chat-bubble bg-white text-black">It was said that you would, destroy the Si would, destroy the Si would, destroy the Sith, not join them.</div>
+            <div className="chat-bubble bg-white text-black">Hey there! Did you <i id='chat_high_text'> cook steak again</i> today? How did it turn out?</div>
           </div>        <div className="chat chat-end my-2">
             <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you would, destroy the Sith, not join them.</div>
           </div>
           <div className="chat chat-start my-2">
-            <div className="chat-bubble bg-white text-black">It was said that you would, destroy the Sith, not join them.</div>
+            <div className="chat-bubble bg-white text-black">"That's a great idea. Have you ever tried using a coffee rub? It adds a nice depth of flavor."</div>
           </div>        <div className="chat chat-end my-2">
             <div className="chat-bubble bg-[#FFF6E9] text-black">It was said <i id="chat_high_text">that you would</i>, destroy the Sith, not join them.</div>
           </div>
+
           <div className="chat chat-start my-2">
-            <div className="chat-bubble bg-white text-black">It was said that you would, destroy the Sith, not join them.</div>
+            <div className="chat-bubble bg-white text-black">Sure do! Just mix together some ground coffee, brown sugar, salt, and a bit of chili powder. Rub it onto the steak and grill as usual.</div>
           </div>
           <div className="chat chat-end my-2 float-right">
             <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
           </div>
+          <div className="chat chat-start my-2">
+            <div className="chat-bubble bg-white text-black">Please do! What's your favorite cut? <i id='chat_high_text'>I guess you’d be into ribeye or filet mignon?</i></div>
+          </div>
+          {/* <div className="chat chat-end my-2 float-right">
+            <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
+          </div> */}
         </div>
       </div>
       <div className="chatbox h-[200px] w-full drop-shadow rounded-xl mt-10">
