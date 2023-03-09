@@ -1,0 +1,32 @@
+{
+  "title": "Gabby",
+  "titleTemplate": "Gabby",
+  "description": "Gabby Chat.",
+  "additionalLinkTags": [
+    {
+      "rel": "icon",
+      "href": "/favicon.ico"
+    }
+  ],
+  "additionalMetaTags": [
+    {
+      "property": "application-name",
+      "content": "Gabby"
+    },
+    {
+      "name": "keywords",
+      "content": "Gabby,ChatGPT,Decentralization,Web3,Blockchain"
+    }
+  ],
+  "openGraph": {
+    "type": "website",
+    "site_name": "Gabby",
+    "images": [
+      {
+        "url": "https://gabby.world/logo.svg",
+        "width": 243,
+        "height": 125
+      }
+    ]
+  }
+}

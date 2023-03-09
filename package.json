@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "daisyui": "^2.51.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0"
