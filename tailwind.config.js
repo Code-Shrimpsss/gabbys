@@ -19,7 +19,7 @@ module.exports = {
         'bginputbox': 'rgba(254, 252, 251, 1)',
         'bgtrsion': 'rgba(255, 255, 255, 0.4)',
         'bgsearchbar': 'rgba(255, 253, 253, 1)',
-        'uncommontext': 'rgba(104, 118, 132, 1)',
+        'uncommontext': 'rgba(104, 118, 132, 1)'
       },
       keyframes: {
         flicker: {

@@ -30,8 +30,6 @@ type Props = {
 
 const SquareItem: NextComponentType<{}, {}, Props> = (props) => {
   const data = props.value;
-  console.log(data);
-
   return (
     <>
       <div className="bg_option bg-bgsearchbar px-2 py-3 rounded-3xl flex justify-center">

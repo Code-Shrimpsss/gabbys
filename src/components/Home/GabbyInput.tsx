@@ -27,8 +27,8 @@ const ChatInput: NextPage = () => {
           </div>
           <div className="chatbox_right_text font-bold text-xl text-gray">Chat with gabby</div>
         </div>
-        <div className="input_out_box p-4 pt-0 bg-bginputbox rounded-b-xl ">
-          <textarea className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onClick={() => { }} />
+        <div className="input_out_box p-4 pt-0 bg-bginputbox rounded-b-xl text-2xl">
+          <textarea className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none " />
         </div>
       </div>
     </>

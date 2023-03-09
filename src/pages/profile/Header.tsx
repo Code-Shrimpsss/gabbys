@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <>
-      <header className='fixed top-0 pt-20 z-50  w-screen max-w-7xl  md:inline-block bg-gradient-to-b from-bgcolor1 to-bgcolor2 '>
+      <header className='gabby_header_bar fixed top-0 pt-20 z-50  w-screen  md:inline-block xl:px-64 lg:px-40 md:px-20 '>
         <div className="flex items-center justify-between pb-4  border-b-2 border-neutral-50">
           <div className="main_text_font text-white text-5xl leading-[50px] -tracking-tighter">
             Gabby World <strong className="text-3xl text-center align-baseline"> &nbsp; {` > `} &nbsp; {`Gabby Profile`}</strong>

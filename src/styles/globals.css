@@ -6,7 +6,6 @@ html {
   font-size: 16px;
   height:100vh;
   @apply bg-gradient-to-b from-bgcolor1 via-bgcolor2 to-bgcolor3  h-screen w-screen;
-  padding: 0em 20em 0em;
 }
 
 body {  
@@ -18,6 +17,11 @@ body {
     'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0em 20em 0em;
+}               
+
+.gabby_header_bar {
+  background: linear-gradient(180deg, #FEE9E2 0%, #FFECE5 100%)
 }
 
 
@@ -28,13 +32,22 @@ body {
   color: rgba(252, 182, 159, 1);  
 }
 
+.chat_message {
+  font-family: 'Biryani';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  font-feature-settings: 'ss01' on;
+  color: #252626;
+}
+
 .chat-main {
   width: 100%;
   height: 500px;
   line-height: 50px;
   overflow-y: scroll;
 }
-
 
 .chat-main::-webkit-scrollbar {
   display: none; /* Chrome Safari */
@@ -62,7 +75,7 @@ body {
   font-weight: 900;
   font-size: 16px;
   line-height: 24px;
-  color: black;
+  color: black; 
 }
 
 .square_message_document{

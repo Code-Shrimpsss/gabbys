@@ -15,7 +15,7 @@ const Square: NextPage = () => {
       <header>
         <Header />
       </header>
-      <div className="profile_box flex mt-10 mb-10">
+      <div className="profile_box flex mt-10 mb-10 px-40">
         <div className="profile_left_box w-[40%] min-h-fit px-8 pt-2 rounded-xl cursor-pointer">
           <div className="gabby_search bg-bgsearchbar w-[100%] rounded-3xl mb-4">
             <Image src={SearchBar} alt="search bar"></Image>
