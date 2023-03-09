@@ -88,7 +88,7 @@ const Home: NextPage = () => {
           <div className="chatbox_right_text font-bold text-xl text-gray">Chat with gabby</div>
         </div>
         <div className="input_out_box p-4 pt-0 bg-bginputbox rounded-b-xl ">
-          <textarea onKeyUp={handleEnder} className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onClick={() => { }} />
+          <textarea className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onClick={() => { }} />
         </div>
       </div>
     </>

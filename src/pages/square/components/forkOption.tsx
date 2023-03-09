@@ -11,20 +11,13 @@ const ForkOption: NextComponentType = () => {
   return (
     <>
       <div className="flex justify-start">
-        <label className="swap swap-flip text-9xl">
-          <input type="checkbox" />
-          <div className="swap-on">😈</div>
-          <div className="swap-off">😇</div>
-        </label>
         <div className="w-16 option_like"><Image className="base_icon" src={CommentStrokeIcon} alt="search bar"></Image><i>3</i></div>
         <div className="w-16 option_like"><Image className="base_icon" src={RetweetStrokeIcon} alt="search bar"></Image><i>23</i></div>
         <div className="w-16 option_like">
           <label className="swap swap-flip text-9xl">
             <input type="checkbox" />
-            <div className="swap-on">😈</div>
-            <div className="swap-off">😇</div>
-            <Image className="base_icon swap-on" src={HeartStrokeIcon} alt="search bar"></Image>
-            <Image className="base_icon swap-off" src={HeartSolidIcon} alt="search bar"></Image>
+            <Image className="base_icon swap-off" src={HeartStrokeIcon} alt="search bar"></Image>
+            <Image className="base_icon swap-on" src={HeartSolidIcon} alt="search bar"></Image>
           </label>
           <i>66</i></div>
         <div className="w-16 option_header"><Image className="base_icon" src={ShareStrokeIcon} alt="search bar"></Image><i>2</i></div>
