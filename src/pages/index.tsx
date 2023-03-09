@@ -5,11 +5,13 @@ import type { NextPage } from 'next'
 import Header from '@/Layout/Header';
 import chat_data from "@/mocks/chat_data.json"
 
-type Message = { text: string; isUser: boolean };
-
 const Home: NextPage = () => {
   const router = useRouter();
+  function handleEnder(e: React.ReactElement) {
+    if (e.key === '16') {
 
+    }
+  }
   return (
     <>
       <header>
@@ -55,12 +57,12 @@ const Home: NextPage = () => {
           <div className="chat chat-end my-2 float-right">
             <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
           </div>
-          <div className="chat chat-start my-2">
+          {/* <div className="chat chat-start my-2">
             <div className="chat-bubble bg-white text-black">Please do! What's your favorite cut? <i id='chat_high_text'>I guess you’d be into ribeye or filet mignon?</i></div>
-          </div>
-          {/* <div className="chat chat-end my-2 float-right">
-            <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
           </div> */}
+          <div className="chat chat-end my-2 float-right">
+            <div className="chat-bubble bg-[#FFF6E9] text-black">It was said that you wouIt was said that you wouldIt was said that you wouldIt was said that you wouldld,It was said that you would, destroy the Sith, not join them.</div>
+          </div>
         </div>
       </div>
       <div className="chatbox h-[200px] w-full drop-shadow rounded-xl mt-10">
@@ -86,7 +88,7 @@ const Home: NextPage = () => {
           <div className="chatbox_right_text font-bold text-xl text-gray">Chat with gabby</div>
         </div>
         <div className="input_out_box p-4 pt-0 bg-bginputbox rounded-b-xl ">
-          <textarea className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onClick={() => { }} />
+          <textarea onKeyUp={handleEnder} className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onClick={() => { }} />
         </div>
       </div>
     </>
