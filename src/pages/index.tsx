@@ -16,6 +16,15 @@ import FourPair from "@/assets/images/chatms/4.jpg"
 import FivePair from "@/assets/images/chatms/5.jpg"
 import SixPair from "@/assets/images/chatms/6.jpg"
 
+const list = [
+  OnePair,
+  TwoPair,
+  ThreePair,
+  FourPair,
+  FivePair,
+  SixPair
+]
+
 const Home: NextPage = () => {
   const router = useRouter();
   const [index, setIndex] = useState<number>(0);
@@ -40,7 +49,7 @@ const Home: NextPage = () => {
       setIndex(index + 1);
       setTimeout(() => {
         setIndex(index + 2);
-      }, Math.floor(Math.random() * 2000))
+      }, Math.floor(Math.random() * 3000))
     }
 
   }
@@ -62,12 +71,8 @@ const Home: NextPage = () => {
             />
           </div>
           <div className="chat-main ml-8 min-w-40">
-            {index === 1 ? <Image className="sonPair" width={800} src={OnePair} alt={"OnePair"}></Image> : ""}
-            {index === 2 ? <Image className="sonPair" width={800} src={TwoPair} alt={"OnePair"}></Image> : ""}
-            {index === 3 ? <Image className="sonPair" width={800} src={ThreePair} alt={"OnePair"}></Image> : ""}
-            {index === 4 ? <Image className="sonPair" width={800} src={FourPair} alt={"OnePair"}></Image> : ""}
-            {index === 5 ? <Image className="sonPair" width={800} src={FivePair} alt={"OnePair"}></Image> : ""}
-            {index === 6 ? <Image className="sonPair" width={800} src={SixPair} alt={"OnePair"}></Image> : ""}
+            {list.map((item, i) =>
+              index === i ? <Image className="sonPair" width={800} src={item} alt={"pic"}></Image> : "")}
           </div>
         </div>
         <div className="chatbox h-[200px] w-full drop-shadow rounded-xl mt-10">
