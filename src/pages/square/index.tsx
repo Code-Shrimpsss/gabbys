@@ -4,12 +4,11 @@ import Image from "next/image";
 
 import SearchBar from "@/assets/images/searchBar.png"
 import GabbyList from "@/assets/images/gabby_list.png"
+import SquareLone from "@/assets/images/chatMessage/square_lone.png"
 import SquareList from "./components/SquareList";
 
 const Square: NextPage = () => {
-
   const barlist = ["Following", "Suggested"]
-
   return (
     <>
       <header>
@@ -36,7 +35,8 @@ const Square: NextPage = () => {
             {/* </>
             )} */}
           </div>
-          <SquareList />
+          {/* <SquareList /> */}
+          <Image src={SquareLone} alt="SquareLone"></Image>
         </div>
       </div>
     </>

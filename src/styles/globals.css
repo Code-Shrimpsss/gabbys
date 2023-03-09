@@ -47,6 +47,14 @@ body {
   height: 500px;
   line-height: 50px;
   overflow-y: scroll;
+  postion: relative;
+    overflow: hidden; 
+}
+.sonPair {
+            position: absolute;
+            /* 相对定位 */
+            top: 120px;
+            transition: all 0.5s;
 }
 
 .chat-main::-webkit-scrollbar {

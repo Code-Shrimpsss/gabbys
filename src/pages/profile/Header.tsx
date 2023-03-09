@@ -1,7 +1,11 @@
+import Image from "next/image";
+import headerBar from "@/assets/images/chatMessage/header.png"
+
 export default function Header() {
   return (
     <>
-      <header className='gabby_header_bar fixed top-0 pt-20 z-50  w-screen  md:inline-block xl:px-64 lg:px-40 md:px-20 '>
+      <Image src={headerBar} alt="headerBar"></Image>
+      <header className='gabby_header_bar fixed top-0 pt-10 z-50  w-screen  md:inline-block xl:px-64 lg:px-40 md:px-20 '>
         <div className="flex items-center justify-between pb-[1.7rem] border-b-2 border-neutral-50">
           <div className="main_text_font text-white text-5xl leading-[50px] -tracking-tighter">
             Gabby World <strong className="text-3xl text-center align-baseline"> &nbsp; {` > `} &nbsp; {`Gabby Profile`}</strong>
@@ -25,7 +29,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <div className=" mb-40"></div>
+      <div className="mb-0"></div>
     </>
   )
 }

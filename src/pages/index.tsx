@@ -3,16 +3,29 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router"
 import type { NextPage } from 'next'
 import Header from '@/Layout/Header';
+
+import Image from "next/image"
+
 // import Testbox from '@/pages/test';
-import chat_data from "@/mocks/chat_data.json"
+import chat_data from "@/mocks/chat_data.json";
+
+import OnePair from "@/assets/images/chatMessage/Slice 1.png"
+import TwoPair from "@/assets/images/chatMessage/Slice 2.png"
+import ThreePair from "@/assets/images/chatMessage/Slice 3.png"
 
 const Home: NextPage = () => {
   const router = useRouter();
-  // function handleEnder(e: React.ReactElement) {
-  //   if (e.key === '16') {
+  const [index, setIndex] = useState<number>(0);
+  const [isInput, setInput] = useState<string>();
 
-  //   }
-  // }
+  function handleEnder(e: React.KeyboardEvent) {
+    if (index > 3) setIndex(0);
+    if (e.keyCode === 13) {
+      setIndex(index + 1);
+      setInput("");
+    }
+  }
+
   return (
     <>
       <header>
@@ -26,6 +39,9 @@ const Home: NextPage = () => {
             />
           </div>
           <div className="chat-main ml-8 min-w-40">
+            {index === 1 ? <Image className="sonPair" src={OnePair} alt={"OnePair"}></Image> : ""}
+            {index === 2 ? <Image className="sonPair" src={TwoPair} alt={"OnePair"}></Image> : ""}
+            {index === 3 ? <Image className="sonPair" src={ThreePair} alt={"OnePair"}></Image> : ""}
           </div>
         </div>
         <div className="chatbox h-[200px] w-full drop-shadow rounded-xl mt-10">
@@ -51,14 +67,15 @@ const Home: NextPage = () => {
             <div className="chatbox_right_text font-bold text-xl text-gray">Chat with gabby</div>
           </div>
           <div className="input_out_box p-4 pt-0 bg-bginputbox rounded-b-xl ">
-            <textarea className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onKeyUp={() => { }} />
+            <textarea
+              value={isInput}
+              className="chatbox_input bg-bginput rounded-md p-2 h-[100px] block w-full focus:outline-none focus:ring focus:ring-indigo-100 resize-none" onKeyUp={handleEnder} />
           </div>
         </div>
       </div>
     </>
   )
 }
-
 
 export default Home
 

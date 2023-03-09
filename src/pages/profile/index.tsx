@@ -12,7 +12,7 @@ const Profile: NextPage = () => {
       <header>
         <Header />
       </header>
-      <div className="profile_box flex mt-10 layout_box xl:px-64 lg:px-40 md:px-20">
+      <div className="profile_box flex layout_box xl:px-64 lg:px-40 md:px-20">
         <div className="profile_left_box w-[40%] min-h-fit px-8 pt-10 rounded-xl cursor-pointer">
           <Image src={profileGabby} alt="horse" onClick={() => router.push({ pathname: "square" })} />
         </div>

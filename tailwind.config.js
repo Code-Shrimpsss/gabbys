@@ -10,6 +10,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'header-texture': "url('src/assets/images/chatMessage/square_long.png')",
+      },
       colors: {
         primary: '#FCB69F4D',
         'bgcolor1': 'rgba(254, 234, 227, 1)',
