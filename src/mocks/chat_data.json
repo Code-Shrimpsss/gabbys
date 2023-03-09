@@ -1,18 +1,6 @@
 [
-  {
-    "user": "Hi Gabby.",
-    "gabby": "Hey there! Did you cook steak again today? How did it turn out?"
-  },
-  {
-    "user": "Yes and it was good again. Might try a different seasoning tomorrow.",
-    "gabby": "That's a great idea. Have you ever tried using a coffee rub? It adds a nice depth of flavor."
-  },
-  {
-    "user": "Not really. Do you have a recipe for it?",
-    "gabby": "Sure do! Just mix together some ground coffee, brown sugar, salt, and a bit of chili powder. Rub it onto the steak and grill as usual."
-  },
-  {
-    "user": "Wow cool. I'll give it a try.",
-    "gabby": "Please do! What's your favorite cut? I guess you’d be into ribeye or filet mignon?"
-  }
+    "Hey there! Did you <i id='chat_high_text'> cook steak again</i> today? How did it turn out?",
+    "That's a great idea. Have you ever tried using a coffee rub? It adds a nice depth of flavor.",
+    "Sure do! Just mix together some ground coffee, brown sugar, salt, and a bit of chili powder. Rub it onto the steak and grill as usual.",
+    "Please do! What's your favorite cut? <i id='chat_high_text'>I guess you’d be into ribeye or filet mignon?</i>"
 ]

@@ -18,7 +18,7 @@ const Profile: NextPage = () => {
         </div>
         <div className="profile_right_box w-[60%] min-h-fit px-12 pt-10  border-l-2 border-white">
           <div className="bg_option bg-bgtrsion px-6 pt-4 rounded-3xl flex justify-center">
-            <Image src={profileOption} alt="horse" className="w-[80%]" />
+            <Image src={profileOption} alt="horse" className="w-[90%]" />
           </div>
         </div>
       </div>

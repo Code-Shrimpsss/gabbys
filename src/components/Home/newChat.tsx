@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import chat_data from "@/mocks/chat_data.json"
 // A type for the message object
 type Message = {
   text: string;
@@ -8,14 +8,7 @@ type Message = {
 
 // A function to generate a random reply
 const getReply = (): string => {
-  const replies = [
-    "你好",
-    "今天天气不错",
-    "我喜欢编程",
-    "你有什么爱好？",
-    "我是必应"
-  ];
-  return replies[Math.floor(Math.random() * replies.length)];
+  return chat_data[];
 };
 
 // A component to render a chat bubble
@@ -23,7 +16,7 @@ const ChatBubble = ({ message, isUser }: Message) => {
   return (
     <div className={`flex ${isUser ? "justify-end" : ""}`}>
       <div
-        className={`chat-bubble ${isUser ? "bg-primary" : ""} ${!isUser ? "bg-base-200" : ""
+        className={`chat-bubble ${isUser ? "bg-[#FFF6E9]" : ""} ${!isUser ? "bg-white" : ""
           }`}
       >
         <div className="chat-content">{message}</div>

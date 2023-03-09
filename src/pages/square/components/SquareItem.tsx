@@ -32,14 +32,14 @@ type Props = {
   value: SquereData;
 }
 
-const SquareItem: NextComponentType<Props> = (props) => {
+const SquareItem: NextComponentType<{}, {}, Props> = (props) => {
   const data = props.value;
   console.log(data);
 
   return (
     <>
       <div className="bg_option bg-bgsearchbar px-2 py-3 rounded-3xl flex justify-center">
-        <div className="square_list_avatar w-[20%]">
+        <div className="square_list_avatar  mr-4">
           <div className="avatar">
             <div className="w-12 rounded-full">
               <Image src={gabbyAvatar} alt="gabbyAvatar"></Image>
@@ -56,24 +56,22 @@ const SquareItem: NextComponentType<Props> = (props) => {
               <strong className="avatar_name_title mr-4">{data.avatar_name}</strong>
               <i>{data.avatar_id}</i>
             </div>
-            <div className="square_message_document mb-2">
+            <div className="square_message_document mb-2 ">
               {data.document}
             </div>
             <div className="square_message_images_list mb-2">
-              {/* {data.images.length === 0 ? "" : data.images.map((item) =>
-                <Image src={item} alt="picture" className="w-[30%]"></Image>
-              )} */}
+              {data.images.length === 0 ? "" : data.images.map((item) =>
+                <Image src={item} alt="picture" width={300} height={200} className="w-[30%]"></Image>
+              )}
             </div>
             <div className="square_fork_option_box">
               <ForkOption />
             </div>
           </div>
           <div className="order_squere_detail w-full">
-
-            {data.order_list.map((item) => {
-              <h1>{item.order_avatar_id}</h1>
-              // <SquareOrderItem order_value={item} />
-            })}
+            {data.order_list.map((item) =>
+              <SquareOrderItem order_value={item} />
+            )}
           </div>
         </div>
       </div>
