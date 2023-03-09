@@ -21,18 +21,33 @@ const Home: NextPage = () => {
   const [index, setIndex] = useState<number>(0);
   const [isValue, setValue] = useState("");
 
-  function handleEnder(e: React.KeyboardEvent) {
-
-    if (index > 6) setIndex(0);
-    if (e.keyCode === 13) {
-      setIndex(index + 1);
-      setValue("");
-    }
+  function random(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  const handleChange = useCallback((val: React.SetStateAction<string>) => {
-    setValue(val);
-  }, [isValue]);
+  function randomClock() {
+    const time = random(0, 3000)
+    const timer = setTimeout(() => {
+      randomClock()
+      clearTimeout(timer)
+    }, time)
+  }
+
+  function handleEnder(e: React.KeyboardEvent) {
+    if (index > 6) setIndex(0);
+    if (e.keyCode === 13) {
+      setValue("");
+      setIndex(index + 1);
+      setTimeout(() => {
+        setIndex(index + 2);
+      }, Math.floor(Math.random() * 2000))
+    }
+
+  }
+
+  // const handleChange = useCallback((val: React.SetStateAction<string>) => {
+  //   setValue(val);
+  // }, [isValue]);
 
   return (
     <>
